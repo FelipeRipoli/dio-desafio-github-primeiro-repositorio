@@ -1,7 +1,25 @@
-Serão colocadas aqui em breve... (ainda não postadas, pois estão no outro PC).
+Comandos GIT
 
+- ls (list)
+mostra todos os arquivos dentro do diretório
 
+- cd (change director)
+usado para passar de um diretório para outro
 
-Comando para "forçar" um push
+- git status
+usado para ver se houve alguma alteração dentro daquele diretório
 
-> git push origin (nome atribuido) -f
+- git add *
+para englobar todas as mudanças dentro diretório
+
+- git commit -m "escreva algo"
+usado para nomear o que aconteceu naquela mudança
+
+- git clone link
+usado para clonar um repositório do GitHub para sua máquina
+
+- git push origin (ou nome atribuido)
+usado para mandar seu repositório (que está na sua máquina) para o github
+
+- git push origin (nome atribuido) -f
+comando usado para "forçar" um push, caso o comando de cima não esteja dando certo

@@ -1,25 +1,44 @@
 Comandos GIT
 
 - ls (list)
-mostra todos os arquivos dentro do diretÃ³rio
+mostra todos os arquivos dentro do diretório
 
 - cd (change director)
-usado para passar de um diretÃ³rio para outro
+usado para passar de um diretório para outro
+
+- cd ..
+sai de dentro do repositório e volta para o seu anterior
 
 - git status
-usado para ver se houve alguma alteraÃ§Ã£o dentro daquele diretÃ³rio
+usado para ver se houve alguma alteração dentro daquele diretório
 
 - git add *
-para englobar todas as mudanÃ§as dentro diretÃ³rio
+para englobar todas as mudanças dentro diretório
 
 - git commit -m "escreva algo"
-usado para nomear o que aconteceu naquela mudanÃ§a
+usado para nomear o que aconteceu naquela mudança
 
 - git clone link
-usado para clonar um repositÃ³rio do GitHub para sua mÃ¡quina
+usado para clonar um repositório do GitHub para sua máquina
 
 - git push origin (ou nome atribuido)
-usado para mandar seu repositÃ³rio (que estÃ¡ na sua mÃ¡quina) para o github
+usado para mandar seu repositório (que está na sua máquina) para o github
 
 - git push origin (nome atribuido) -f
-comando usado para "forÃ§ar" um push, caso o comando de cima nÃ£o esteja dando certo
+comando usado para "forçar" um push, caso o comando de cima não esteja dando certo
+
+- pwd
+mostra o caminho percorrido até o momento (dentro do repositório atual)
+
+- Gerar chave SSH (ed25519)
+ssh-keygen -t ed25519 -C seuemail@gmail.com
+> após, navegue até a pasta em que a chave está, copie e coloque no GitHub.
+
+- cat
+para pegar alguma informação, como a chave ssh, por exemplo.
+
+- agent pid 
+ eval $(ssh-agent -s)
+
+- ssh-add id_ed25519
+Identity added: id_ed25519 (seuemail@gmail.com)

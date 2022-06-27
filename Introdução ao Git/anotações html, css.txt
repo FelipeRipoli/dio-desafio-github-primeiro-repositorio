@@ -1,0 +1,44 @@
+- Sempre começar com <DOCTYPE html>
+
+- Após, abrir as tags <html></html>
+
+- Em seguinte, na estrutura, virá o <header></header>
+> Dentro do header seguirão todas as informações iniciais, como o meta charset UTF-8, nome do autor, título da página, 
+possíveis fontes (caso não sejam declaradas no CSS), o favicon da janela da página, entre mais...
+
+- Na sequência virá o <body></body>
+> Dentro do body terão todas as informações da página, como os links para páginas sequências (extensões da mesma página), 
+as imagens, enfim, todo o conteúdo que deverá ser apresentado no site.
+
+> Podendo ser <header></header>; <section></section>; <article></article>; <aside></aside> e <footer></footer>. Não nessa
+sequência obrigatóriamente...
+
+TEXTOS :
+
+- Para títulos usar <h1> até <h6>
+> Seguindo ordem de importância, ou seja, <h1></h1> para títulos principais e os demais seguindo ordem de tamanho.
+
+- Para escritas/ textos comuns, usar a tag <p></p>
+
+- Para links, usar a tag <a> LINK </a>
+> <a href=" LINK "> NOME PARA APARECER COMO LINK CLICÁVEL </a> 
+ex : <a href="github.com/feliperipoli>GitHub Felipe</a>
+
+° target_blak 
+> Usado para direcionar o link para uma nova guia, ou seja, quando o usuário clicar no link, o endereço irá ser aberto em uma 
+nova guia, caso contrário, seria aberto na guia atual do site, fechando-o para abrir o conteúdo do link.
+
+° "mailto:email@gmail.com"
+> Caso queira criar um link específico para e-mail, basta usar a tag <a href="mailto:gmail@gamil.com">CONTEÚDO</a>
+
+IMAGENS 
+
+- Usar <img src="img/taltal.png">
+> Dentro do src será detalhado o nome da imagem e o caminho dentro dos diretórios para achá-la.
+
+° alt
+> Dentro da tag <img>, o alt é usado para descrever a imagem, ou seja, aumenta a acessibilidade.
+> O conteúdo colocado dentro do alt irá aparecer quando a imagem não carregar no site, ou quando o usuário passar o mouse e deixar
+por cima da imagem.
+
+OBS : <img src="caminho/img.png" alt="Imagem do Campo do Morumbi">

@@ -18,6 +18,13 @@ para englobar todas as mudanças dentro diretório
 - git commit -m "escreva algo"
 usado para nomear o que aconteceu naquela mudança
 
+- git remote add "nome" link
+usado para direcionar onde que seu repositório será upado com o push
+> o link é o do repertório on-line (GitHub).
+
+- git remote -v
+mostra as listas de repositórios remotas cadastradas
+
 - git clone link
 usado para clonar um repositório do GitHub para sua máquina
 

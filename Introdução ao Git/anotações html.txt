@@ -1,4 +1,4 @@
-<!doctype html> (sempre colocar isso ao inicio de um cód. html)
+﻿<!doctype html> (sempre colocar isso ao inicio de um cód. html)
 
 - Após o doctype, precisamos colocar uma "tag"
 - Se você cria uma tag, ao final você precisa fecha-la com uma "/" (repetir a mesma tag ao final do cód.)
@@ -512,3 +512,5 @@ OBS : Só irá funcionar com vídeos publicos e não listados.
 
 ° Diferenças entre a Incorporação do Youtube e do Vimeo :
 - Com os vídeos no Youtube, mesmo que no modo não listado, QUALQUER pessoa poderá incorporar o seu vídeo em outros sites, pois fica livre o acesso ao vídeo já que a pessoa terá o link. Já pelo Vimeo não, a plataforma restringe o acesso do vídeo a outras pessoas, nesse caso, evitando a incorporação de terceiros e a pirataria de conteúdos.
+
+.

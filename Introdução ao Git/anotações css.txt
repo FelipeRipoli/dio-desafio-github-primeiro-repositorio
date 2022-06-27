@@ -1,4 +1,4 @@
-- O CSS é usado para estilizar, personalizar o(s) código(s) que são criados pelo HTML, ou seja, a partir daqui será trabalhado CSS em conjunto com HTML.
+﻿- O CSS é usado para estilizar, personalizar o(s) código(s) que são criados pelo HTML, ou seja, a partir daqui será trabalhado CSS em conjunto com HTML.
 - Para começar, escreva um código base simples com um link que te leve em outro código.
 
 # Sobrescrever o estilo padrão do HTML utilizando o CSS com estilos em linha :
@@ -265,3 +265,5 @@ Na aba do CSS, em partes reutilizáveis, quando isso é acrescentado,
 faz com que aquela configuração seja a mais importante, ou seja,
 mesmo que ela apareça dando outro comando mais a baixo, a com
 !important prevalecerá.
+
+.

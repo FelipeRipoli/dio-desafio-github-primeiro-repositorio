@@ -1,4 +1,4 @@
-Diretório criado para "treinar" Git e GitHub e incrementar seu repertório.
+﻿Diretório criado para "treinar" Git e GitHub e incrementar seu repertório.
 
 Aqui será encontrado :
 
@@ -10,3 +10,5 @@ Aqui será encontrado :
 Felipe L. Roque Ripoli,
 
 Bootcamp TQI Fullstacker Developer - DIO.
+
+.

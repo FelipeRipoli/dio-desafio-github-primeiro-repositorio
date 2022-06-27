@@ -1,0 +1,14 @@
+﻿Diretório criado para "treinar" Git e GitHub e incrementar seu repertório.
+
+Aqui será encontrado :
+
+1- Conteúdos pertinentes ao Bootcamp.
+2- Anotações pessoais sobre as matérias.
+3- Comandos e anotações a parte.
+4- Desafios e atividades propostas pelos Especialistas do Bootcamp.
+
+Felipe L. Roque Ripoli,
+
+Bootcamp TQI Fullstacker Developer - DIO.
+
+.

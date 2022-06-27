@@ -1,44 +1,514 @@
-- Sempre começar com <DOCTYPE html>
+<!doctype html> (sempre colocar isso ao inicio de um cód. html)
 
-- Após, abrir as tags <html></html>
+- Após o doctype, precisamos colocar uma "tag"
+- Se você cria uma tag, ao final você precisa fecha-la com uma "/" (repetir a mesma tag ao final do cód.)
 
-- Em seguinte, na estrutura, virá o <header></header>
-> Dentro do header seguirão todas as informações iniciais, como o meta charset UTF-8, nome do autor, título da página, 
-possíveis fontes (caso não sejam declaradas no CSS), o favicon da janela da página, entre mais...
+<html>
+<head>
+<title> TESTANDO </title>
+<meta charset ="utf-8" />
+</head>
 
-- Na sequência virá o <body></body>
-> Dentro do body terão todas as informações da página, como os links para páginas sequências (extensões da mesma página), 
-as imagens, enfim, todo o conteúdo que deverá ser apresentado no site.
+<body>
+Testando (Minha primeira página HTML).
+</body>
 
-> Podendo ser <header></header>; <section></section>; <article></article>; <aside></aside> e <footer></footer>. Não nessa
-sequência obrigatóriamente...
+</html>
 
-TEXTOS :
+° O <html> </html> são as chaves iniciais do programa, e tudo deve ser obrigatoriamente escrito dentro delas (chave incial e final do programa).
 
-- Para títulos usar <h1> até <h6>
-> Seguindo ordem de importância, ou seja, <h1></h1> para títulos principais e os demais seguindo ordem de tamanho.
+° Tudo que estiver dentro do <head> </head> será atribuido ao título da página (TITULO DA JANELA DA PÁGINA). 
+- porém, para o título em específico, deve se usar o <title> </title>.
 
-- Para escritas/ textos comuns, usar a tag <p></p>
+° Para criar o corpo da página, devemos programar dentro do <body> </body>.
 
-- Para links, usar a tag <a> LINK </a>
-> <a href=" LINK "> NOME PARA APARECER COMO LINK CLICÁVEL </a> 
-ex : <a href="github.com/feliperipoli>GitHub Felipe</a>
+° charset mais usado em páginas web para poder usar acentos e "ç" (e outras coisas), é : <meta charset ="utf-8" />
 
-° target_blak 
-> Usado para direcionar o link para uma nova guia, ou seja, quando o usuário clicar no link, o endereço irá ser aberto em uma 
-nova guia, caso contrário, seria aberto na guia atual do site, fechando-o para abrir o conteúdo do link.
+° Para fechar uma "tag", existem duas maneiras :
+1 - Padrão, por exemplo : " <meta charset ="utf-8"> </meta> "
+2 - Self close, por exemplo : " <meta charset ="utf-8" /> "
 
-° "mailto:email@gmail.com"
-> Caso queira criar um link específico para e-mail, basta usar a tag <a href="mailto:gmail@gamil.com">CONTEÚDO</a>
+° A tag <h1> serve como um primeiro título já dentro da página.
 
-IMAGENS 
+° A tag <p> serve para colocar as informações escritas dentro da página.
 
-- Usar <img src="img/taltal.png">
-> Dentro do src será detalhado o nome da imagem e o caminho dentro dos diretórios para achá-la.
+° A tag <br/> serve para ter uma quebra de linha, ou seja, criar parágrafos dentro da tag <p>
 
-° alt
-> Dentro da tag <img>, o alt é usado para descrever a imagem, ou seja, aumenta a acessibilidade.
-> O conteúdo colocado dentro do alt irá aparecer quando a imagem não carregar no site, ou quando o usuário passar o mouse e deixar
-por cima da imagem.
+° Tags para destacar uma palavra :
+- <em> para Itálico
+- <strong> para Negrito
 
-OBS : <img src="caminho/img.png" alt="Imagem do Campo do Morumbi">
+# LISTAS :
+
+~ Não Ordenadas <ul>
+<li> para criar tópicos dentro de uma lista 
+
+~ Ordenadas <ol>
+mantém o <li> para criação de tópicos dentro da lista
+
+~ Lista de Definição <dl>
+Usar a tag <dt> para um subtítulo, e a tag <dd> para uma informação do subtítulo, por exemplo :
+
+HTML 
+é uma linguagem de programação 
+
+# IDENTAÇÃO DO CÓDIGO
+
+- A primeira tag do cód após o <!doctype html> sempre será o "pai" do código, e com isso, tudo que vier após deve estar a sua direita. Para isso, basta usar o "tab". E assim sucessivamente.
+
+- Para adicionar um comentário (como // em C), basta colocar " <! -- ", e para fechar " --> ".
+
+# Tags de Cabeçalho
+- Existem 6 tipos de tags para cabeçalho, que são elas :
+<h1>
+<h2>
+<h3>
+<h4>
+<h5>
+<h6>
+- O h1 é o que possui a maior fonte, o h6 é o que possui a menor fonte, porém isso utilizando apenas o HTML, com o CSS isso é ajustado conforme a necessidade do programador.
+° O h1 só deve ser usado apenas UMA vez dentro da sua página, contendo a informação mais importante da página perante o buscador do navegador.
+OBS : Cada título deve ser usado por nível de importância dentro da página, sendo h1 o mais importante, devendo ser usado APENAS UMA ÚNICA VEZ!
+- EM HOMEPAGES, o h1 normalmente é usado em logos dentro do site, o h2 no primeiro título pós logo dentro do site, como uma matéria em destaque, por exemplo, e o h3 seria as demais matérias, e assim sucessivamente.
+
+<!-- Para o home page -->
+       <!--<title>Nome do site - Descrição breve do site (slogan)</title>-->
+
+       <!-- Para blogs -->
+       <title>Título do artigo - Nome do site</title>
+
+° Tag para descrição de uma página :
+<meta name="description" content="Descrição completa do conteúdo com até, no máx, 156 caracteres" />
+<meta name="keywords" content="Palavras chaves do seu conteúdo, igual as que são usadas ao upar um vídeo no YT"/>
+OBS : Adicionar palavras separadas por "vírgulas (,)" , por exemplo : A palavra Curso HTML ficaria : " Curso, HTML ".
+OBS : Não usar keywords que não façam parte do conteúdo da página, pois isso pode gerar penalidades a página.
+
+° Tag de autor :
+- Tag usada, literalmente, para indicar quem foi o responsável por criar/ produzir a página.
+<meta name="author" content="Felipe Ripoli" />
+
+
+# TAGS (organização/ estruturação de um site) :
+
+OBS : TODAS AS TAGS A SEGUIR SÃO USADAS DENTRO DA TAG <body> !!
+
+° <header>
+- Parte do topo do site (cabeçalho), parte que se repete em todas as segmentações do site. 
+
+° <nav>
+- Tag dos menus de navegação. 
+
+° <section>
+- É uma seção do site. Por exemplo, ao criar uma lista dentro de um site com links, cada link estará dentro de uma section. São seções do site.
+- É indicado que dentro de cada seção tenha um <h1>.
+
+° <article>
+- É uma tag usada para exibir posts (de blogs, fóruns, etc), o conteúdo central de uma página, etc. É uma tag que pode existir independente do resto do site, pois se retirar a tag article de uma página, e a deixar indepentende, o conteúdo deve ser compreendido de maneira independente do restante do conteúdo da página principal, ele não depende de outras seções para existir.
+
+° <aside>
+- São as barras laterais ou "sidebars" dos sites/ Blogs. São conteúdos posicionados de modo paralelo ao restante do conteúdo do site.
+
+°<footer>
+- É a tag de rodapé, a parte final da página. É semelhante ao <header>, só que ao invés de ser o início, é o fim da página.
+
+OBS : As tags <header> e <footer>, não são, necessariamente, o início e o fim de uma página, pois podem ser o começo e o fim de outras tags, como por exemplo, ser o <header> ser o começo de uma <section>, e o <footer> ser o final da mesma section.
+Ou seja, podemos ter <header> e <footer> no começo e no final de qualquer uma das tags citadas a cima, e dos sites também.
+
+# Continuação TAGS 
+
+° <blockquote>
+- Essa tag para fazer citações. Quando por exemplo, você quer pegar um trecho de outro site, ou outro autor e colocar no seu artigo dentro do seu post.
+	<body>
+	<blockquote>
+		<p> citação </p>
+	</blockquote>
+	</body>
+- O segredo dessa tag não está dentro do HTML, pois ao rodar sairá como uma citação normal, porém, dentro do CSS, o <blockquote> terá uma estilização totalmente diferenciada, o que dará sentido a tag.
+
+° Links, existem dois tipos de maneiras de marcar os links :
+- <a href="link dentro dos arquivos">texto do link</a> (desta maneira, o link será aberto na página atual)
+- <a href="link dentro dos arquivos" target="_blank">texto do link</a> (desta maneira, o link será aberto em outra guia)
+OBS : Para entrar em diretório/ pasta para colocar no link, deve ser digitado " nome da pasta/ nome do arquivo "
+OBS : Para sair de um diretório/ pasta para colocar o link, deve ser digitado " ../ nome do arquivo "
+
+# Imagens, você precisa ter a imagem desejada salva em seu computador
+- Dentro de uma tag <p>, digite a tag <img src="caminho até a imagem"/>
+<p>
+  <img src="imagem teste" alt="banner.html"/>
+</p>
+
+OBS : widht é usado para ajustar a dimensão de uma imagem, porém não é a maneira correta de ajustar a imagem. 
+A maneira correta é usando o CSS, pois ao ajustar usando o widht você deixa seu site mais pesado, gastando, assim mais recursos.
+O certo é tratar a imagem, deixando-a do tamanho adequado antes de upa-la, ou usando o CSS, porém, já upando-a do tamanho certo é a melhor maneira de economizar recursos do seu site.
+
+OBS : O alt="" é usado para descrever a imagem. É obrigatório ter essa tag na descrição de cada imagem upada ao site, seja como banner, logo, ícone, etc...
+
++ CASO QUEIRA USAR UMA IMAGEM DO GOOGLE, BASTA COPIAR A URL E FAZER O MESMO PROCESSO TIRANDO O CAMINHO DA PASTA E INSERINDO O LINK DA IMAGEM.
+Porém, isso não é recomendo, pode ser considerado como "roubo", ou algo gênero.
+
+° Em um link, após o target="_blank", é interessante colocar a tag title, pois com ela, ao passar o cursor do mouse por cima do link na página, é gerado uma descrição breve da onde esse link irá te levar.
+	
+	<aside>
+            <h3>Redes sociais no link a baixo : </h3>
+            <p><a href="pagina teste 1.html" target="_blank" title=" Página com todas as Redes sociais de Fel11ppe" >Clique aqui para ter acesso </a></p>
+        </aside>
+
+# DIV, tag usada para agrupar/ centralizar os conteúdos dentro do site :
+<div id="wrap"> (usado logo após a tag <body>)
+</div id="wrap"> (usado uma linha antes da tag </body>)
+- wrap ou qualquer outro nome.
+
+ao declarar o id, devemos abrir a aba do CSS, e declarar esse id com o #, e ajustar o tamanho usando o widht
+
+# Sempre ao criar um site, crie um arquivo "index".
+A página inicial do site (homepage), sempre deve se chamar "index",
+pois é sempre o primeiro arquivo a ser lido em um servidor de 
+internet. 
+
+# Dentro da primeira tag <html>, colocar lang="pt-br", para definir
+a página como idioma oficial em Português Brasil.
+"  <html lang="pt-br">  "
+
+/ / /
+
+# COMO FAZER O SINAL DE MENOR E MAIOR APARECEREM NO SEU RESULTADO FINAL ?
+(dentro de um site)
+
+° LT (LESS THAN, menor que) / GT (GREATER THAN, maior que)
+- Para fazer os sinais <> aparecerem no seu código, você deve digitar &lt;p&gt;
+Exemplo : &lt;p&gt; 123 teste, teste 123 &lt;p&gt;
+O resultado final no seu site será : "<p> 123 teste, teste 123 <p>"
+
+
+
+# SÍMBOLOS
+ 
+- Espaço em branco : &nbsp; (literalmente espaço em branco)
+- Marca Registrada : &reg; (®)
+- Copyright : &copy; (©) - <span>&copy; 2022 - FRipoli, Desenvolvimento Web</span>
+- Trade Mark ™ : &trade;
+- Símbolo de moedas : &euro; / &pound; (libra) / &yen; (Japones)
+&cent; (centavo americano) /
+
+- Símbolos matemáticos como o Delta : &delta; (aparece a imagem pequena), para
+aparecer o delta convencional (grande), usar ; &Delta; 
+- Símbolo de vazio (zero cortado) : &empty;
+- Símbolo de Soma (M deitado para esquerda) : &sum;
+
+- seta para cima : &uparrow; (ou &uarr; que seria a abreviação do comando)
+- seta pra direita : &rightarrow; ou &rarr;
+- seta pra esquerda : &leftarrow; ou &larr;
+- seta para baixo : &downarrow; ou &darr;
+
+
+
+# Emoji : emojipedia.org.
+
+- Pesquisar o site emojipedia, ache o emoji que você quer, e procure o codepoints
+desse emoji. O copie para frente do "U+", e escreve assim no seu compilador :
+&#x(código do emoji na frente do x).
+O "&#x" serve para avisar ao HTML que entrará um cód. hex, que é o formato do
+cód. do emoji.
+
+
+
+# Direitos autorais de Imagens :
+
+- Ao pesquisar por alguma imagem no google, na aba de ferramentas, escolher esse 
+tipo de imagem : 
+
+. Marcadas para reutilização com modificação, isto é, você poderá usar aquela 
+imagem como bem quiser, poderá usar com fins comerciais, em sites oficiais, 
+gerando renda em cima, muda-la, etc...
+
+. Marcadas para reutilização, isto é, você pode usar de maneira pessoal e/ou 
+comercial, desde que você não altere a imagem.
+
+. Marcadas para reutilização não comercial com modificação, isto é, você pode 
+usar a imagem da maneira que quiser, modificando-a, etc... desde que você não 
+gere receita com essa imagem no seu site, ou seja, sem fins comerciais.
+
+. Marcadas para reutilização não comercial, isto é, você pode usar a imagem
+sem modifica-la nos seus sites, desde que você não gere renda em cima, ou seja,
+sem fins comerciais.
+ 
+OBS : A opção mais indicada é, obviamente, as Marcadas para reutilização com
+modificação, pela liberdade que a imagem possui, e por poder serem usadas em
+sites com fins comerciais.
+
+° Sites para utilizar imagens gratuitas com fins comerciais :
+- Unsplash 
+- Pexels
+
+
+
+# DENTRO DO GUIMP
+- A largura MÁXIMA recomendável de uma imagem para um site é de 1500 px, o que
+já é uma imagem rasoável.
+- Para ajustar o tamanho dessa imagem dentro do guimp, basta abrir o guimp e 
+selecionar a imagem, clicar em "imagem" na barra superior do guimp, e em
+"redimensionar imagem", e coloca a largura desejada, ou coloca 1500px de largura
+com o "cadeado" fechado, que ai o próprio guimp ajusta a altura da imagem.
+
+° Ainda dentro de "Redimensionar imagem", temos a opção de resolução, a qualidade
+de 72 já é uma boa qualidade, mais do que isso é desnecessário, e 50 é uma
+resolução recomendável.
+
+° Para salvar sua imagem, clique em "arquivo", e clique em "exportar como" para
+gerar uma nova imagem com o novo tamanho/ resolução e salve com a qualidade de
+70 %, ou próximo/. Ou, clique em "sobreescrever" para apagar a imagem antiga, 
+deixando apenas a nova com as proporções.
+
+OBS : Um tamanho bom para imagens de site, também, é 650px de largura.
+
+
+
+# Como alterar a Favicon do seu site ?
+
+OBS : PARA UM MELHOR FUNCIONAMENTO, O ARQUIVO DE UMA FAVICON/ ÍCONE DEVE SER ".ico"
+
+- O que é favicon ?
+Favicon é a imagem que fica na "janela" do site.
+Ex : no Facebook fica o "f", no Google, fica o símbolo do google...
+
+- Para Favicons/ ícones gratuitos, pesquisar o site "iconarchive".
+- Para desenhar seu próprio icon, pesquisar pelo site "favicon.cc", e desenhar ícone.
+- Ou, ainda, pesquisar pelo site "favicon.io", e transformar um texto, png, ou emoticon em icon.
+
+° Para colocar o favicon no seu site, abra o seu cód HTML, e dentro da aba "head", escreva "link:favicon", e clique "enter", no "href" coloque o caminho das pastas até abrir a sua imagem definida com ".ico"
+
+
+
+#<b> ou <strong>
+
+- As duas tags vão deixar a palavra selecionada em negrito, ou seja, vão gerar um destaque naquela frase/ palavra, todavia, a tag <b> serve apenas para deixar as palavras em negrito, sem nenhum sentido ou significado extra, já a tag <strong> é usada para deixar a frase/ palavra em negrito e marcar que aquele trecho tem um sentido, que aquela parte tem uma importância de destaque nesse parágrafo.
+
+
+
+# <i> ou <em> - Itálico 
+
+- Para colocar um trecho em Itálico, o processo é o mesmo de sempre, colocar a parte desejado entre as tags. A tag <i> é uma tag que serve apenas para deixar o trecho em Itálico, sem gerar um significado extra para a frase, já a tag <em>, deixa seu trecho em Itálico e marca com uma importância maior aquele trecho dentro do seu parágrafo.
+
+
+
+# Marcar Texto (marca-texto)
+
+- Com a tag <mark> criamos uma marcação amarela, semelhante a um marca-texto físico. Para aplicar, é o mesmo processo de sempre, coloque o trecho que receberá o marca-texto dentro das tags <mark>conteúdo</mark>.
+
+
+
+# Letras Grandes e Pequenas 
+
+- Para letras pequenas, usamos a tag <small>conteúdo</small>, já as letras grandes não possuem uma tag que não seja obsoleta, atualmente, pelo HTML, ou seja, para ajustar isso é só configurando pelo CSS.
+
+
+
+# Texto Deletado (com efeito de riscado) ~zap~ 
+
+- Para usar esse efeito de letras "riscadas/ excluídas", basta usar a tag <del>conteúdo excluido</del>.
+
+
+
+# Sublinhado
+
+- Temos duas tags possíveis para criar um trecho sublinhado em HTML. O primeiro é com a tag <u>conteúdo sublinhado</u>, todavia, essa tag é apenas para gerar um sublinhado, sem dar um sentido a mais no trecho, sem gerar destaque (ficar atento a essa tag, pois pode estar perto de se tornar obsoleta). E, temos a tag <ins>conteúdo</ins>, essa tag gera o sublinhado no trecho, e ainda gera um sentido, um "valor extra" para aquele trecho.
+
+
+
+# Sobrescrito
+
+- O sobrescrito é usado nos casos matemáticos, por exemplo, em que precisamos elevar um número, como : " x^20 + 50". Para isso, usamos a tag <sup>, que ficaria, nesse casp, "x<sup>20</sup> + 50".
+
+
+
+# Subscrito
+
+- O texto subscrito é ao contrário do caso anterior, ao invés de elevar, queremos colocar para baixo, como no caso da fórmula do H20 em que o "2" fica um pouco mais para baixo na formação da fórmula. Nesse caso ficaria "H<sub>2</sub>O".
+
+
+
+# Fonte Monoespaçada
+
+- A fonte monoespaçada serve para padronizar o tamanho de cada letra, ou seja, as letras maiúsculas, minúsculas, maiores, menores, pontos, etc... terão o mesmo tamanho. Esse tipo de fonte é muito boa para a leitura de um código, então, caso queira adicionar um código escrito dentro do seu site, é recomendável que se adicione a tag "<code>código dentro do site</code>".
+
+
+
+# Identação em Código 
+
+- Usamos a tag <pre> para que a identação criada dentro do compilador apareça como resultado final dentro do nosso site, ou seja, se eu criar um código python dentro do HTML e quiser que esse código apareça identado no meu site, eu devo usar a tag "<pre>código python completo</pre>", que ao final o código irá aparecer com todas as identações e espaçamentos certinho no resultado final dentro do site.
+
+
+
+# Citações Simples
+
+- Para criar uma citação, basta usar a tag <q>trecho</q>. Podemos também, simplesmente, usar as "aspas", mas com a tag <q> você estará agregando sentido e mostrando que aquele trecho tem um "valor a mais".
+
+
+
+# Citações Maiores
+
+- Com a tag <blockquote cite=""> podemos fazer uma citação de um parágrafo inteiro de um livro. o "cite" é para colocar o link da referência da sua citação. O "cite" não ficará visível dentro do seu site, mas será usado pelos mecânismos de busca do navegador para recomendar seu site ao usuário.
+
+
+
+# Abreviações (abreviação)
+
+- Com a tag <abbr> podemos dizer o que uma abreviação significa, como por exemplo : "<abbr title="você">vc</abbr>". E ao passar o cursor por cima da frase no site final, aparecerá um uma janelinha mostrando o significado da abreviação.
+
+
+
+# Listas Ordenadas 
+
+- Para uma lista ordenada, devemos colocar dentro de uma tag <ol></ol>, e usar a tag <li></li> para definir a lista, normal. 
+
+- Dentro da tag <ol> temos a opção type="" (1; A; a; I; i), que seriam, respectivamente, para a lista ser em apresentada em numeração, letras maiúsculas, minúsculas; Algarismos Romanos maiúsculos; Minúsculos. E, a tag start="", que na numeração, por exemplo, podemos pedir para que a lista comece do número 3, 4, etc...
+
+
+
+# Listas NÃO Ordenadas 
+
+- As listas não ordenandas são definidas pela tag <ul> e <li>, da mesma maneira da anterior. 
+
+- Dentro da tag <ul> temos a opção type="", que é usado para persolizar o marcador da ordem da lista, e temos as opções "disc (bolinha preta fechada); circle (bolinha com o centro transparente); square (um quadradinho);"
+
+
+
+# Lista de Definições (Lembra o Dicionário)
+
+- Estilo de lista usado para apresentar um termo, palavra, etc... e em seguida (a baixo), apresentar o seu significado. Para isso usamos a tag <dl>, dentro dessa tag, usamos a tag <dt>termo</dl>, e após usamos a tag <dd>explicação</dd> </dl>.
+
+<dl> Definition List
+<dt> Definition Term
+<dd> Definition Description
+
+
+
+# Opção "rel"
+
+- Essa opção é usada dentro da tag <a>, para indicar ao código qual tipo de link você está marcando ali. Por exemplo, supondo que você queira usar aquela tag <a> para um link externo : <a href="link" rel="external">texto</a>"
+Em um link interno, dentro do rel, você pode usar "prev" para indicar que você irá voltar a uma página anterior, ou "next" para indicar que você está indo para uma nova página.
+
+° Link "nofollow" e "follow":
+- Dentro de um link (tag <a>), temos a opção de marca-lo como um link que tem o seu aval, que o site é seguro, que você tem plena certeza de que é um site oficial, etc... E para isso usamos a opção rel="follow", isso indicará ao navegador que o site externo pode ser indexado, tudo certinho. Já o nofollow, significa totalmente o contrário do follow, ou seja, é um site que você não tem certeza da procedência, que não tem 100% do seu aval, mas mesmo assim você quer usa-lo no seu site, e, usando a opção rel="nofollow", o seu cliente será direcionado ao site, normal, porém o navegador não irá indexar aquele site ao seu.
+
+
+
+# Links para Download :
+
+- Para adicionar um link para Download, basta criar uma tag <a> colocar o caminho do seu arquivo e colocar a opção download="arquivotal.pdf" e acrescentar tb o type="". O type varia de acordo com o arquivo, ou seja, cada tipo de arquivo tem um type diferente. Os mais usados que são o PDF e o ZIP tem o type parecido, que é "application/zip" e "application/pdf".
+
+Ex :
+
+<a href="../../arquivos/curriculo.pdf" download="curriculo.pdf" type="application/pdf">Baixar o Currículo em PDF</a> 
+
+
+
+# Adaptação de Material para multiplas Mídias :
+
+- Devemos padronizar as imagens em três tamanhos, ou seja, se você irá usar 5 imagens no seu site, padronize as 5 nos tamanhos a seguir :
+
+° 300x300 px = Celulares
+° 700x700 px = Tablets
+° 1000x1000 px = Tv's, notebooks, etc...
+OBS : resolução de 80 para ambas.
+
+- Apos as imagens estarem padronizadas, devemos usar a tag <picture> no HTML, com ela poderemos carregar os três tamanhos em uma tag só, e fazer com que o site seja adaptável para Tv's, computadores, tablets, celulares e qualquer tipo de aparelho que consiga acessar o site.
+- Dentro da tag <picture>, devemos usar a tag <source media="(max-widht: 1050px)" srcet="caminho da imagem" type="imagemtal/png">
+OBS : Após a tag do <source> virá a tag <img> para selecionar a imagem. Sempre comece pela maior imagem no <img>, e a imagem média no <source>, e ACIMA do <source> da imagem média, coloque outro <source> para a imagem pequena. Ficaria então : 
+
+<picture>
+        <source media="(max-width: 750px )" srcset="P.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="M.png" type="image/png">
+        <img src="G.png" alt="Imagem Flexível">
+</picture>
+  	
+
+------> Caderno a partir daqui :
+
+# Áudios em Sites (mídias) :
+
+° Como conseguir efeitos sonoros e músicas de maneira gratuita : 
+- Abra o Youtube, clique na sua foto no canto superior direito, depois clique em "Youtube Studio", e procure na barra lateral o ícone da "biblioteca de áudio", e escolha sua música ou efeito sonoro.
+
+
+° A forma mais fácil, porém mais limitada :
+
+- Para reproduzir o áudio no site, devemos usar a tag <audio src="" controls autoplay></audio>, dessa maneira.
+
+.exs:
+
+<body>
+   <h3>áudio tal</h3>
+      <p>clique para reproduzir</P>
+      <audio src="musica.mp3" controls></audio>
+</body>
+
+
+° A forma mais complicada, porém com maior chance de compatibilidade em todos os navegadores :
+
+- Ainda vamos usar a tag <audio>, porém de uma forma diferente.
+- Adicione sua tag <audio>, e em baixo coloque a tag <source src="" type=""> (source:src;) e arrumar normal sua linha.
+- Os 3 formatos mais usados são : "MP3, WAV e OGG".
+OBS : dentro da tag <audio> devemos colocar a opção " preload="metadata" ", isso indica ao site que não é necessário carregar o áudio em si, só informações (data, tamanho, etc), a não ser que o usuário clique para carrega-lo, nesse caso ele irá carregar normalmente.
+- A opção "controls" é para aparecer a opção do player.
+Obs : Ao colocar a tag <source> tenha em mente que a ordem altera o produto, pois o site irá tentar carregar os arquivos na ordem, ou seja, no caso a baixo o site tentaria carregar primeiro MP3, se não desse certo seria o OGG, e assim por diante.
+
+.ex :
+
+ <section>
+        <h2>testando mídias/ áudio:</h2>
+        <audio preload="metadata" controls>
+            <source src="../exs011/midia/till-i-let-go-neffex.mp3" type="audio/mpeg">
+            <source src="../exs011/midia/till-i-let-go-neffex.ogg" type="audio/ogg">
+            <source src="../exs011/midia/till-i-let-go-neffex.wav" type="audio/wav">
+            <p>Infelizmente seu navegador não consegue reproduzir o áudio. Entre por outro navegador
+                ou clique <a href="../exs011/midia/till-i-let-go-neffex.mp3">aqui</a> para baixar o arquivo.</p>
+           </audio>
+</section>
+
+Obs : Cuidado com arquivos WAV, pois são MUITO grandes, o que os tornam arquivos MUITO pesados.
+
+° Como colocar o áudio em Looping ?
+- Use a opção loop dentro da sua tag <audio>.
+<audio preload="metadata" controls loop>
+
+-------------------------
+
+# Vídeos em Sites (mídia) :
+
+- Pexels é um site onde se consegue vídeos gratuitos.
+- Assim como nos áudios, o ideal é que tenhamos o mesmo vídeo em formatos diferentes (MP4, M4V, webm, OGV).
+OBS : MP4 e webM são os mais "populares" entre os navegadores.
+
+- Handbrake é um site para formatações de vídeos, porém só funciona em sistemas 64bits. Então, enquanto isso, usar o sony vegas para converter os arquivos.
+
+# Vídeos Hospedados no seu site :
+- Com esse método temos um problema, que é que a cada pessoa que acessar o seu site e carregar o seu vídeo, o consumo de "banda" (tráfego de dados) vai aumentar, e quanto mais consome, mais caro fica para manter esse site no ar. Se um vídeo tem 11kb, com 1000 acessos/ reproduções serão gastas 11GB de banda, e com vídeos maiores, ou mais vídeos no mesmo site o consumo só tende a aumentar, e o preço a subir.
+
+° Como colocar o vídeo no meu site ?
+- O processo, basicamente, é o mesmo de inserir um áudio, só que ao invés de usar a tag <audio>, você deve usar a tag <video>, e dentro da tag <video>, usar a tag <source> (source:src;).
+OBS : Colocar por ordem do menor (primeiro source) para o maior (último source).
+
+<video poster="media/thumb.png"controls preload="metadata">
+        <source src="midia/meu-video.mp4" type="video/mp4">
+        <source src="midia/meu-video.ogv" type="video/ogg">
+        <source src="midia/meu-video.webm" type="video/webm">
+	<p>Seu navegador, infelizmente, não consegue carregar o vídeo. Entre novamente aqui por outro navegador, ou instale o vídeo 	clicando <a href="midia/meu-video.mp4">aqui</a>.</p>                   
+</video>
+
+- A opção "poster" serve para definir uma thumb para o seu vídeo.
+- A opção "controls" funciona igual no <audio>, é usada para aparecer o player na sua tela (start, pause).
+- A opção "preload:" serve também igual no <audio>, para indicar ao site se ele deve ou não carregar o arquivo inteiro junto ao início do site, com a opção "preload:metadata" você indica ao site que não é necessário carregar o vídeo completo junto ao inicio do site, e sim informações como tamanho e data, e se caso o usuário clique no vídeo, ai sim o site o carrega.
+- O comando "loop" também funciona para o vídeo.
+
+° Como colocar um vídeo do Youtube no seu site :
+- Escolha o vídeo que você deseja colocar no seu site, e perto do botão do like vai ter a opção de compartilhar, quando abrir o menuzinho, clique em incorporar e copie o cód. HTML gerado, depois é só colar na sua aba HTML onde desejar.
+OBS : Só irá funcionar com vídeos publicos e não listados.
+- Desta forma, o tráfego que está sendo gasto é do Youtube, e não do seu site, ou seja, desta maneira o seu site não vai ser encarecido na hora de pagar a hospedagem.
+
+° Vídeos pelo Vimeo :
+- A plataforma do Vimeo é sim melhor que a do Youtube para incorporação, pois o vídeo fica mais fluído, tem uma coloração mais bonita e mais personalizações, porém, é uma plataforma de serviço pago para upar o seu vídeo lá.
+- Caso queira usar algum vídeo que já esteja postado lá, o processo é o mesmo que no Youtube.
+
+° Diferenças entre a Incorporação do Youtube e do Vimeo :
+- Com os vídeos no Youtube, mesmo que no modo não listado, QUALQUER pessoa poderá incorporar o seu vídeo em outros sites, pois fica livre o acesso ao vídeo já que a pessoa terá o link. Já pelo Vimeo não, a plataforma restringe o acesso do vídeo a outras pessoas, nesse caso, evitando a incorporação de terceiros e a pirataria de conteúdos.

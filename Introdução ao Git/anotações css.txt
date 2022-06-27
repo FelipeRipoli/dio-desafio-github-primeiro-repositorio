@@ -1,0 +1,267 @@
+- O CSS é usado para estilizar, personalizar o(s) código(s) que são criados pelo HTML, ou seja, a partir daqui será trabalhado CSS em conjunto com HTML.
+- Para começar, escreva um código base simples com um link que te leve em outro código.
+
+# Sobrescrever o estilo padrão do HTML utilizando o CSS com estilos em linha :
+- É o pior método que tem para códigos grandes, mas se for para usar em código muito pequeno, é razoável.
+
+1° style :
+é a tag principal para personalização em CSS, com ela podemos alterar cores, tirar sub linhas dos links, entre outros.
+- é usado sempre dentro de uma tag de link (<a/>)
+
+2° text-decoration :
+é usado dentro de uma tag de link (<a/>), tendo algumas funções
+text-decoration : none; (tira a sub linha do link)
+
+3° background : cabem cores em decimal, rgb, ou escrevendo o nome da cor em inglês
+
+# Sobrescrever o estilo padrão do HTML utilizando o CSS com estilos em geral :
+Para isso é necessário criar uma tag <style> no começo do código dentro da tag <head>, desta forma :
+
+<!doctype html>
+<html>
+    <head> 
+        <title> Fel11ppe's Page </title>
+        <meta charset="utf-8" />
+	a{text-decoration : none;}
+        </style>
+    </head>
+
+- Para aumentar o tamanho das fontes dos links, exclusivamente, é usado :
+font-size : tamanhopx; (dentro da tag <style>)
+
+- Para personalizar a cor de um h1, ..., h6, devemos abrir o h1/6 dentro de um <style> e escrever font-family : e o nome da fonte em inglês;
+h1{
+  font-family : helvetica, san-serif;
+}
+
+A "vírgula(,)" utilizada entre as fontes serve como opção ("ou"). 
+Neste caso, está sendo pedido que o site utilize a primeira fonte, porém, caso o site não a tenha desponível, que use a segunda, resumidamente.
+
+> Esse é um jeito bom, porém, ainda há um maneira melhor de se fazer essa personalização
+
+# FOLHA DE ESTILO EM CASCATAS
+° Colocando o estilo em um arquivo esterno e linkando com a seção red dentro do código
+- Maneira mais recomendável de se usar o CSS para estilização de sites
+
+1 - Abra uma nova aba, agora com o final .CSS
+2 - Pegue a parte de dentro tag do style com as personalizações do código, igual a da maneira anterior.
+	a{
+                text-decoration : none;
+                font-size : 20px; 
+            }
+
+            h1{
+                font-family: 'Trebuchet MS', sans-serif, ;
+            }
+3 - Para linkar a aba do CSS com a do HTML devemos usar a tag <link (dentro da tag <head>).
+Isso na aba do HTML, usar :
+<link rel="stylesheet" type"text/css" href="link para o arquivo .css (caminho)">
+
+OBS : Esse método é chamado de Folha de Estilo em Cascata, pois o compilador irá ler as informações de cima para baixo, 
+ou seja, a última informação é a que prevalece. Por exemplo, se tiverem duas específicações em a{}, a última específicação
+que aparecerá no resultado final dentro do site.
+
+° Para conseguirmos personalizar apenas um elemento do código, devemos criar uma classe, ou um "id".
+Dentro do código podemos criar várias classes, tanto como repeti-las, porém o id é único, nesse caso,
+podendo ser criado apenas uma única vez.
+
+° id :
+DENTRO DO HTML : 
+<p><a href="link" id="kkeaemen" target="_blank" title="Acesse o último vídeo do canal">Clique em mim para ver o vídeo :)</a></p>
+
+DENTRO DO CSS :
+
+#kkeaemen{
+	escrever as personalizações desejadas
+	 }
+
+° Classes (class)
+
+DENTRO DO HTML :
+<p><a href="https://www.twitch.tv/fel11ppe" class="123" target="_blank" title="Twitch Fel11ppe">Twitch Fel11ppe</p>
+<p><a href="https://www.facebook.com/felipe.ripoli.3" target="_blank" title="Acesse Facebook Fel11ppe"> Facebook Fel11ppe</p>    
+<p><a href="https://www.instagram.com/felipe_ripoli/" class="123"target="_blank" title="Acesse Instagram Fel11ppe"> Instagram Fel11ppe</p>    
+
+DENTRO DO CSS :
+.123{ 
+    personalizar da maneira desejada		
+    }
+
+# DIV, tag usada para agrupar/ centralizar os conteúdos dentro do site :
+<div id="wrap"> (usado logo após a tag <body>)
+</div id="wrap"> (usado uma linha antes da tag </body>)
+- wrap ou qualquer outro nome.
+
+ao declarar o id, devemos abrir a aba do CSS, e declarar esse id com o #, e ajustar o tamanho usando o widht
+
+#wrap{
+     width : 960px /*por exemplo*/
+     margin : auto; /*margin (margem), auto (automático)*/
+     /*padding : topo, direita, baixo, esqueda;*/
+     padding : 10px;	  
+      }
+OBS : Se todos os valores dentro do padding forem iguais, não há necessidade de repetir o valor 4 vezes, colocando-o apenas uma vez está bom.
+padding, basicamente, é o espaçamento entre cada parte da margin 
+
+# UL e LI
+SEMPRE USAR ESSE COMANDO NO <ul> DENTRO DA ABA DO CSS PARA RETIRAR AS BORDAS DO <ul>
+ul{
+    list-style:none;
+    padding-left: 20px ; /*o valor deve ser declarado de acordo com o que já foi declarado antes, para não ficar desigual*/
+}
+
+# Como tirar as marcações (bolinhas) da tag <li> ou <ul>
+dentro da aba do CSS, digite a parte onde está a tag <li> ou <ul> no HTML
+e digite o comando "list-style:none;" , dessa forma, as bolinhas serão excluídas.
+
+# Como deixar as informações das listas uma ao lado da outra :
+dentro da aba CSS, digite a parte onde está a tag <li> ou <ul> no HTML
+e digite o comando "display:inline-block" ou apenas "display:inline", desta forma
+todas as listas, ou informações serão colocadas umas ao lado das outras.
+Ainda dentro do <li>, digitar "margin-right : valor px;" para que haja uma distância entre as informações
+
+li{
+    display:inline-block;
+    margin-right:10px;
+}
+
+° Para colocar o efeito de sublinhado quando passar o cursor por cima da um link, basta fazer isso :
+1 - Personalize o link da maneira que deseja, da maneira padrão
+
+header nav ul li a{
+    font-size: 18px;
+    color: #ff6600;
+    text-decoration: none;
+}
+
+2 - Copie o que vem antes da "{", cole e adicione :hover{}
+
+header nav ul li a:hover{
+    text-decoration : underline;
+}
+
+3 - O resultado final seria :
+ 
+header nav ul li a{
+    font-size: 18px;
+    color: #ff6600;
+    text-decoration: none;
+}
+header nav ul li a:hover{
+    text-decoration : underline;
+}
+
+# Para colocar as Sections, Articles e o Sidebar no lugar, devemos :
+Com a aba HTML aberta, criar um id para sections e articles, e um id para o Sidebar.
+Após criar os dois id's, na aba do CSS, devemos escrever a rota das sections e articles e colocar 
+o comando "float : left;" -> Desta maneira, irá tudo para a esquerda
+e fazer o contrário no id do side bar "float : right;"
+
+#content{
+    float: left;
+    background:red;
+    width: 660px;
+    /*padding: 0px 10px 0px 10px;*/
+}
+
+#sidebar{
+    float : right;
+    background: royalblue;
+    width: 330px;
+    margin: auto;
+    /*padding: 0px 20px 0px 0px;*/
+}
+
+Com isso, o seu footer (rodapé) irá sair do lugar, e para volta-lo ao seu lugar de origem,
+basta escrever o comando "overflow : hidden;" no primeiro id do comando, que seria o id que 
+pega o código todo dentro da tag <body>, e acrescentar o código "clear : both;" na parte 
+footer do CSS, dessa maneira o rodapé voltará ao seu lugar de origem.
+
+OBS : Para não ter que declarar o a:hover em todas as tags, se faz isso após a tag <body> no começo da aba CSS :
+
+a:link, a:visited{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration : underline;
+}
+
+Desta maneira, todas as abas com o final "a", não terão o efeito de estarem sempre sublinhadas, e sim, apenas, 
+quando você passar o cursor do mouse por cima. E as cores são definidas de maneira individual, de acordo com a 
+necessidade do programador. Todavia, se quiser que todos os link possuam as mesmas cores, basta acrescentar o
+código " color : cor; " dentro da variável "a:link, ...."
+
+# PERSONALIZAÇÕES / TIPOGRAFIAS :
+1- color : (nome da cor em inglês, cor em rgb ou em hexa)
+
+2- letter-spacing : (Espaçamento das letras entre si. Funciona com
+números negativos)
+
+3- text-transform : 
+° uppercase (deixa todas as letras em maiúsculo)
+° lowercas (deixa todas as letras em minúsculo)
+° capitalize (deixa a primeira letra de cada palavra em maiúsculo)
+
+4- text-ident : (valor em px)
+Gera o primeiro parágrafo de uma frase.
+
+5- text-aline :
+Usado para alinhar uma linha/ parágrafo, para esquerda, direita ou centro.
+° left (alinhado para esquerda)
+° right (alinhado para direita)
+° center (alinhado ao centro)
+° justify (alinhado na esquerda e na direita, ao mesmo tempo)
+
+6- text-shadow 
+Efeito de sombra que pode ser feito em um texto
+text-shadow : 1px 1px black; 
+(deve-se escolher a quantidade de sombra na horizontal, e depois, 
+na vertical, e por último, a cor da sombra).
+OBS : Caso for adicionado um terceiro valor antes da cor, será 
+gerado um efeito de desfoque na sombra.
+
+7- font-size :
+Para aumentar ou diminuir o tamanho da fonte de um texto.
+
+8- font-family :
+É usada para definir qual estilo de fonte você deseja usar no texto.
+
+9- Fonts do Google
+Acessando o site do Google Fonts, você deverá escolher a opção 
+desejada e clicar na mesma, escolher o tamanho (light, regular, bold)
+clicar em "select this style", copiar o link e coloar no código
+HTML dentro do <head>. Após isso, copie o nome da fonte, e no
+CSS, coloque onde deseja usa-la.
+
+10- border-radius :
+Para arredondar os cantos do elemento.
+
+11- cursor: pointer;
+Para transformar o cursor na "mãozinha", quando o mesmo passar por 
+cima de um link.
+
+12- max-widht : 100%
+Largura máxima da imagem como 100%, isso fará que a imagem se ajuste
+ao layout do site.
+
+# Reset CSS (não é tão indicado, pois tira toda a personalização inicial do seu site)
+- O reset CSS é usado para poder padronizar as fontes, e o seu site
+em si, em todos os navegadores. Para fazer isso, pesquise pelo
+site "reset CSS" no seu navegador, e entre no site da "meyerweb",
+copie o código CSS, crie um arquivo CSS no seu compilador, e 
+adicione a sua página HTML. (<link rel="stylesheet" href="">)
+
+# CSS Normalize (normalize.css)
+- Tenta deixar todos os elementos com um estilo padronizado da 
+forma que seja exibido da forma mais semelhante possível em cada
+um dos navegadores (cria uma nova formatação).
+- Pesquise por "css normalize" no navegador, entre no github do
+"necolas", e clique em donwload do arquivo. Logo em seguida, o
+código CSS aparecerá na sua tela, e o esquema é o mesmo do 
+Reset CSS.
+
+#!important
+Na aba do CSS, em partes reutilizáveis, quando isso é acrescentado,
+faz com que aquela configuração seja a mais importante, ou seja,
+mesmo que ela apareça dando outro comando mais a baixo, a com
+!important prevalecerá.

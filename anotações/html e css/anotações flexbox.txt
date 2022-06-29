@@ -9,3 +9,32 @@ Tipos de alinhamento:
 - space-between: cria um espaçamento igual entre os elementos.
 - space-around: os espaçamentos do meio são duas vezes maiores que o incial e final.
 
+parte 2:
+
+° flex-grow: Define a proporcionalidade de
+crescimentos dos itens, respeitando o 
+tamanho de seus conteúdos internos.
+OBS: Não irá funcionar caso tenhamos
+adicionado justify-content ao nosso
+flex container.
+
+° Flex-basis: É a propriedade que 
+estabelece o tamanho inicial do 
+item antes da distribuição de 
+espaço restante dentro dele, usando
+como base o conteúdo interno disposto.
+
+- auto: Caso o item não tenha tamanho,
+este será proporcional ao conteúdo do
+item.
+
+- px, %, em, ...: são valores exatos
+previamente definidos.
+
+- 0 (zero): terá relação com a definição
+de flex-grow.
+
+
+° Flex-shrink: É a propriedade que 
+estabelece a capacidade de redução
+ou compressão do tamanho de um item.
